@@ -9,12 +9,22 @@ const PORT = process.env.PORT || 5000;
 require("dotenv").config();
 
 const cors = require("cors");
+const chats = require("./data/data.js");
 app.use(cors());
 
 
 app.get("/", (req, res) => {
     res.status(200).send("Server is running...")
-    // console.log("Server is running")
+})
+
+
+app.get("/api/chat", (req, res) => {
+    res.status(200).send(chats)
+})
+
+app.get("/api/chat/:id", (req, res) => {
+    const singleChat = chats.find((chat)=> chat._id === req.params.id)
+    res.status(200).send(singleChat)
 })
 
 const userSchema = new mongoose.Schema({
