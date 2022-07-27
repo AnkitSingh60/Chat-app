@@ -4,13 +4,13 @@ const app = express();
 const connect = require("./config/db.js")
 app.use(express.json());
 const userRoutes = require("./routes/userRoutes")
+const chats = require("./data/data.js");
 
 
 const PORT = process.env.PORT || 5000;
 require("dotenv").config();
 
 const cors = require("cors");
-const chats = require("./data/data.js");
 app.use(cors());
 
 
