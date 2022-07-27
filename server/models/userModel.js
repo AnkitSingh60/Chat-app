@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema(
         password: { type: "String", required: true },
         pic: {
             type: "String",
-            required: true,
             default: "https://cdn-icons-png.flaticon.com/512/147/147144.png"
         },
         isAdmin: {
