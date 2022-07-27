@@ -1,16 +1,15 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const app = express();
 const connect = require("./config/db.js")
 app.use(express.json());
 const userRoutes = require("./routes/userRoutes")
-const chats = require("./data/data.js");
 
 
 const PORT = process.env.PORT || 5000;
 require("dotenv").config();
 
 const cors = require("cors");
+const { notFound, errorHandler } = require("./middleware/errorMiddleware.js");
 app.use(cors());
 
 
@@ -19,6 +18,11 @@ app.get("/", (req, res) => {
 })
 
 app.use("/api/user",userRoutes)
+
+//error handling....
+
+app.use(notFound);
+app.use(errorHandler);
 
 //Just for checking if we got data from the database
 
