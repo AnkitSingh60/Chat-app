@@ -20,13 +20,13 @@ const Login = () => {
    
     <FormControl id="email" isRequired>
         <FormLabel>Email</FormLabel>
-        <Input placeholder='Enter your email' value={email} onChange={(event) => setEmail(event.target.value)} />
+        <Input placeholder='Enter your email' value={email ?? ""} onChange={(event) => setEmail(event.target.value)} />
     </FormControl>
 
     <FormControl id="password" isRequired>
         <FormLabel>Password</FormLabel>
         <InputGroup>
-            <Input placeholder='Enter password' value={password} type={showpass ? "text" : "password"} onChange={(event) => setPassword(event.target.value)} />
+            <Input placeholder='Enter password' value={password ?? ""} type={showpass ? "text" : "password"} onChange={(event) => setPassword(event.target.value)} />
 
             <InputRightElement width="4.5rem">
                 <Button h="1.75 rem" size="sm" onClick={showHidePassword}>

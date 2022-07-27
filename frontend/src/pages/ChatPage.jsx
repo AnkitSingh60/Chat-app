@@ -9,20 +9,16 @@ const ChatPage = () => {
     const data = await res.json();
     setChats(data);
   };
-  console.log("chats:", chats);
+  // console.log("chats:", chats);
 
   useEffect(() => {
-    fetchChats();
+    // fetchChats();
   }, []);
 
   return (
     <>
       <h1>ChatsPage</h1>
-      {chats.map((chat) => (
-        <div key={chat._id}>
-          <li>{chat.chatName}</li>
-        </div>
-      ))}
+      
     </>
   );
 };
