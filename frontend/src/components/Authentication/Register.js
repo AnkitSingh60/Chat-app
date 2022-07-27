@@ -21,6 +21,7 @@ const Register = () => {
     }
     return (
         <VStack spacing="5px" >
+            
             <FormControl id="name" isRequired>
                 <FormLabel>Name</FormLabel>
                 <Input placeholder='Enter your name' value={name} onChange={(event) => setName(event.target.value)} />
