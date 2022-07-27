@@ -9,6 +9,9 @@ const Login = () => {
     const showHidePassword = () => {
         setShowPass(!showpass)
     }
+    const handleSubmit = () => {
+        
+    }
 
 
 
@@ -36,7 +39,7 @@ const Login = () => {
 
     
 
-    <Button className='button' colorScheme='teal' width={"50%"} style={{marginTop: 30}} variant='solid'>
+    <Button className='button' colorScheme='teal' width={"50%"} style={{marginTop: 30}} variant='solid' onClick={handleSubmit}>
         Login
     </Button>
     <Button className='button' colorScheme='gray' width={"50%"} style={{marginTop: 10}} variant='solid' onClick={()=> {

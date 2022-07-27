@@ -19,6 +19,9 @@ const Register = () => {
     const postDetails = (pics) => {
 
     }
+    const handleSubmit = () => {
+        
+    }
     return (
         <VStack spacing="5px" >
             
@@ -64,7 +67,7 @@ const Register = () => {
                 <Input type="file" p={1.5} accept="image/*" onChange={(event) => postDetails(event.target.file[0])} />
             </FormControl>
 
-            <Button className='button' colorScheme='teal' width={"50%"} style={{marginTop: 30}} variant='solid'>
+            <Button className='button' colorScheme='teal' width={"50%"} style={{marginTop: 30}} variant='solid' onClick={handleSubmit}>
                 Register
             </Button>
 
