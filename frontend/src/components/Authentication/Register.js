@@ -96,7 +96,7 @@ const Register = () => {
                 }
                 const { data } = await axios.post("/api/user", { name, email, password, pic }, config);
                 toast({
-                    title: 'Registration sucessfull..!',
+                    title: 'Registration sucessfull..! Please login',
                     status: 'success',
                     position: 'top',
                     duration: 5000,
@@ -105,7 +105,7 @@ const Register = () => {
 
                 localStorage.setItem("chatApp_UserInfo", JSON.stringify(data));
                 setLoading(false);
-                navigate("/chats");
+                navigate("/");
                 window.location.reload();
                 return;
 
