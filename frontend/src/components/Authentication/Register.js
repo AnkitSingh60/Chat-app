@@ -28,7 +28,7 @@ const Register = () => {
             toast({
                 title: 'Please select an image!',
                 status: 'warning',
-                position: 'bottom',
+                position: 'top',
                 duration: 5000,
                 isClosable: true,
             })
@@ -56,7 +56,7 @@ const Register = () => {
             toast({
                 title: 'Please select an image!',
                 status: 'warning',
-                position: 'bottom',
+                position: 'top',
                 duration: 5000,
                 isClosable: true,
             })
@@ -71,7 +71,7 @@ const Register = () => {
             toast({
                 title: 'Please fill all the feilds...!',
                 status: 'warning',
-                position: 'bottom',
+                position: 'top',
                 duration: 5000,
                 isClosable: true,
             })
@@ -82,7 +82,7 @@ const Register = () => {
                 toast({
                     title: 'Passwords do not match...!',
                     status: 'warning',
-                    position: 'bottom',
+                    position: 'top',
                     duration: 5000,
                     isClosable: true,
                 })
@@ -98,7 +98,7 @@ const Register = () => {
                 toast({
                     title: 'Registration sucessfull..!',
                     status: 'success',
-                    position: 'bottom',
+                    position: 'top',
                     duration: 5000,
                     isClosable: true,
                 });
@@ -115,7 +115,7 @@ const Register = () => {
                     status: "warning",
                     duration: 5000,
                     isClosable: true,
-                    position: "bottom",
+                    position: "top",
                 });
                 setLoading(false)
                 return;
